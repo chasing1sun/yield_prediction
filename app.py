@@ -13,8 +13,10 @@ from model import predict_yield
 
 curr_path = os.path.dirname(os.path.realpath(__file__))
 
-feature_cols = ['AverageRainingDays', 'clonesize', 'AverageOfLowerTRange',
-                'AverageOfUpperTRange', 'honeybee', 'osmia', 'bumbles', 'andrena']
+feature_cols = ['作物加热夜间管温/Growpipe Tn (℃)', '保温幕布启用时长\n/Energy Screen Duration (hs)',
+                '作物加热日间管温/Growpipe Td (℃)', '轨道加热日间管温/Railpipe Td (℃)',
+                '轨道加热夜间管温/Railpipe Tn (℃)', '遮阴幕布启用时长\n/Shading Screen Duration (hs)',
+                '夜间平均湿度差\n/HDn-Avg (g/m3)', '温室最低温度/Tmin (℃)', '夜间平均相对湿度/RHn-Avg (%)']
 
 context_dict = {
     'feats': feature_cols,
